@@ -10,6 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 Vagrant.configure("2") do |config|
 
+config.ssh.private_key_path = "/home/antonio/.ssh/id_rsa"
+
 config.vm.provision "shell",  path: "script.sh"
 end
 
