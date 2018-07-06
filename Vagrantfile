@@ -16,7 +16,7 @@ config.vm.provision "shell",  path: "script.sh"
 end
 
 config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "playbook.yml"
+   ansible.playbook = "playbook.yml"
   end
 
 end

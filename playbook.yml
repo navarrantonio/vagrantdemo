@@ -1,12 +1,8 @@
 ---
-- hosts: localhost
+- hosts:  all
   become: true
   tasks:
     - name: update apt cache
       apt: update_cache=yes
     - name: install apache
-      apt: name=apache2 state=present
-   
-   
-   
-       
+      apt: name=apache2 state=present       
