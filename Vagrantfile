@@ -9,15 +9,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
 Vagrant.configure("2") do |config|
-
+  config.vm.network "private_network", ip: "10.0.2.1"
 config.ssh.private_key_path = "/home/antonio/.ssh/id_rsa"
 
 config.vm.provision "shell",  path: "script.sh"
 end
 
 config.vm.provision "ansible" do |ansible|
-   ansible.playbook = "playbook.yml"
+    ansible.playbook = "playbook.yml"
   end
-
 end
-

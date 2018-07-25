@@ -4,5 +4,7 @@
   tasks:
     - name: update apt cache
       apt: update_cache=yes
-    - name: install apache
+    - name: install bind9
+      apt: name=bind9 state=present
+    - name: install apache2
       apt: name=apache2 state=present       
